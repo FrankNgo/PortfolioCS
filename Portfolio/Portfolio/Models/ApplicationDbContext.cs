@@ -13,5 +13,10 @@ namespace Portfolio.Models
         {
 
         }
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+        }
+        public DbSet<Blog> Blogs { get; set; }
     }
 }
