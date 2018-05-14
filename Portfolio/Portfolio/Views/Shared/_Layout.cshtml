@@ -35,7 +35,7 @@
                     <li><a asp-area="" asp-controller="Posts" asp-action="Index">Blog</a></li>
                 </ul>
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="GetRepos">Repos</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="GithubRepos">Repos</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     @if (!User.Identity.IsAuthenticated)
@@ -57,7 +57,7 @@
                         </li>
                     }
                     <li>
-                        <a asp-area="" asp-controller="Account" asp-action="Register">Sign UP</a>
+                        <a asp-area="" asp-controller="Account" asp-action="Register">Sign Up</a>
                     </li>
                 </ul>
             </div>

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using Portfolio.Models;
 using Portfolio.ViewModels;
 
-namespace Demofolio.Controllers
+namespace Portfolio.Controllers
 {
     public class AccountController : Controller
     {

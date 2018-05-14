@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Portfolio.Models;
 using System.Security.Claims;
 
@@ -29,9 +29,7 @@ namespace Portfolio.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Comment comment)
         {
-            comment.Blog = await _context.Blogs
-                .Include(c => c.Comments)
-                .FirstOrDefaultAsync(p => p.Id == comment.BlogId);
+            comment.Blog = await _context.Blogs.Include(c => c.Comments).FirstOrDefaultAsync(p => p.Id == comment.BlogId);
             var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var currentUser = await _userManager.FindByIdAsync(userId);
             comment.User = currentUser;

@@ -33,9 +33,9 @@ namespace Portfolio.Controllers
             return View();
         }
 
-        public IActionResult GetRepos()
+        public IActionResult GithubRepos()
         {
-            var starredRepos = GitHubAPI.GetRepos();
+            var starredRepos = GitHubAPI.GithubRepos();
             return View(starredRepos);
         }
     }

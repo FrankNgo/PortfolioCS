@@ -19,14 +19,14 @@ namespace Portfolio.Models
         public string description { get; set; }
         public int stargazers_count { get; set; }
 
-        public static List<GitHubAPI> GetRepos()
+        public static List<GitHubAPI> GithubRepos()
         {
             var client = new RestClient();
             client.BaseUrl = new Uri("https://api.github.com");
 
             var request = new RestRequest();
             request.AddHeader("header", "application/vnd.github.v3+json");
-            request.AddHeader("User-Agent", EnvironmentalVariables.AccountUserAgent);
+            request.AddHeader("User-Agent", EnvironmentalVariables.userAgent);
             request.Resource = "/users/FrankNgo/starred";
 
             var response = new RestResponse();

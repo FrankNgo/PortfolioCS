@@ -7,6 +7,6 @@ namespace Portfolio.Models
 {
     public static class EnvironmentalVariables
     {
-        public static string AccountUserAgent = "745d5ab504f98dd2274af5515c37dca864f7b9fd";
+        public static string userAgent = "229d276b7e2eb6970dcf50c3fe1505a7ccb80dc3 ";
     }
 }
