@@ -28,7 +28,6 @@ namespace Portfolio
                                               options
                                                    .UseMySql(Configuration["ConnectionStrings:DefaultConnection"]));
 
-            // This is new
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
@@ -44,9 +43,9 @@ namespace Portfolio
 
         public void Configure(IApplicationBuilder app)
         {
-            // This is new
-            app.UseIdentity();
 
+            app.UseStaticFiles();
+            app.UseIdentity();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
