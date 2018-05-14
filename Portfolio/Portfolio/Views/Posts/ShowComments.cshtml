@@ -1,0 +1,12 @@
+﻿@using Portfolio.Models
+
+<ul>
+    @foreach (var comment in Model)
+    {
+        <li>
+            <p>Comment Id: @comment.Id</p>
+            <p>Title: @comment.Title</p>
+            <p>Copy: @comment.Copy</p>
+        </li>
+    }
+</ul>

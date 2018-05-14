@@ -3,6 +3,11 @@
     padding-bottom: 20px;
 }
 
+img {
+    width: 10px;
+    height: 10px;
+}
+
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
@@ -35,3 +40,4 @@ textarea {
         display: none;
     }
 }
+

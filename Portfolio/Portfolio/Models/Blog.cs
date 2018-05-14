@@ -11,9 +11,11 @@ namespace Portfolio.Models
     public class Blog
     {
         [Key]
-        public int BlogId { get; set; }
+        public int Id { get; set; }
         public string Title { get; set; }
-        public string Content { get; set; }
+        public string Copy { get; set; }
+        public virtual string UserId { get; set; }
         public virtual ApplicationUser User { get; set; }
+        public virtual List<Comment> Comments { get; set; }
     }
 }

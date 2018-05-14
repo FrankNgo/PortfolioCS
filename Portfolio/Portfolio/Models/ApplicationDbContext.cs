@@ -18,5 +18,6 @@ namespace Portfolio.Models
             base.OnModelCreating(builder);
         }
         public DbSet<Blog> Blogs { get; set; }
+        public DbSet<Comment> Comments { get; set; }
     }
 }

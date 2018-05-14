@@ -2,6 +2,64 @@
     ViewData["Title"] = "Home Page";
 }
 
-<h2>Franks Portfolio</h2>
 
-<p>@Html.ActionLink("Blogs", "Index", "Blogs")</p>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body {
+        font-family: "Lato", sans-serif
+    }
+
+    .mySlides {
+        display: none
+    }
+</style>
+<body>
+
+    <!-- Page content -->
+    <div class="w3-content" style="max-width:2000px">
+        <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+            <div class="w3-display-container w3-center">
+                <img src="~/images/tiger.jpg" />
+            </div>
+            <h2 class="w3-wide">Frank Ngo Portfolio</h2>
+            <p class="w3-justify">
+               
+            </p>
+            <div class="w3-row w3-padding-32">
+                <div class="w3-quarter">
+                    <img src="~/images/tiger.jpg" class="w3-round w3-margin-bottom" alt="Screenshot" style="width:60%">
+                    <p>3db</p>
+                </div>
+                <div class="w3-quarter">
+                    <a href="https://camemorize-f34d2.firebaseapp.com">
+                        <img src="~/images/Camemorize_Gallery.PNG" class="w3-round w3-margin-bottom" alt="Screenshot" style="width:60%">
+                    </a>
+                    <a href="https://camemorize-f34d2.firebaseapp.com"><p>Camemorize</p></a>
+                </div>
+                <div class="w3-quarter">
+                    <a href="https://space-plan.firebaseapp.com/">
+                        <img src="~/images/space-plan.png" class="w3-round w3-margin-bottom" alt="Screenshot" style="width:60%">
+                    </a>
+                    <a href="https://space-plan.firebaseapp.com/"><p>Space Plan</p></a>
+                </div>
+                <div class="w3-quarter">
+                    <a href="https://trill-o.firebaseapp.com/">
+                        <img src="~/images/tiger.jpg" class="w3-round w3-margin-bottom" alt="Screenshot" style="width:60%">
+                    </a>
+                    <a href="https://trill-o.firebaseapp.com/"><p>Trill-O</p></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Content -->
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+        <h2 class="w3-wide w3-center">Contact Me</h2>
+        <i class="fa fa-phone w3-hover-opacity"></i>
+        <i class="fa fa-envelope w3-hover-opacity"> </i>
+        <a href="https://github.com/FrankNgo"><i class="fa fa-github w3-hover-opacity"></i></a>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </footer>
+</body>
