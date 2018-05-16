@@ -21,22 +21,21 @@ namespace Portfolio.Models
 
         public static List<GitHubAPI> GithubRepos()
         {
-            var client = new RestClient();
-            client.BaseUrl = new Uri("https://api.github.com");
+            RestClient client = new RestClient("https://api.github.com");
+            RestRequest request = new RestRequest("search/repositories", Method.GET);
+            request.AddParameter("q", "user:FrankNgo");
+            request.AddParameter("sort", "stars");
+            request.AddParameter("per_page", "3");
+            request.AddHeader("User-Agent", "FrankNgo");
+            RestResponse response = new RestResponse();
 
-            var request = new RestRequest();
-            request.AddHeader("header", "application/vnd.github.v3+json");
-            request.AddHeader("User-Agent", EnvironmentalVariables.userAgent);
-            request.Resource = "/users/FrankNgo/starred";
-
-            var response = new RestResponse();
             Task.Run(async () =>
             {
                 response = await GetResponseContentAsync(client, request) as RestResponse;
             }).Wait();
-            JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(response.Content);
-            var repoList = JsonConvert.DeserializeObject<List<GitHubAPI>>(jsonResponse.ToString());
-            return repoList;
+
+            JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(response.Content);
+            return JsonConvert.DeserializeObject<List<GitHubAPI>>(jsonResponse["items"].ToString());
         }
 
         public static Task<IRestResponse> GetResponseContentAsync(RestClient theClient, RestRequest theRequest)
