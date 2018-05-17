@@ -76,6 +76,7 @@ namespace Portfolio.Controllers
         {
             if (ModelState.IsValid)
             {
+
                 try
                 {
                     _context.Update(blog);
