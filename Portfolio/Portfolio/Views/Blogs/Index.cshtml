@@ -1,11 +1,11 @@
-﻿@*@model IEnumerable<Portfolio.Models.Blog>
+﻿@model IEnumerable<Portfolio.Models.Blog>
 
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
-}*@
+}
 
-@*<h2>Posts</h2>
+<h2>Posts</h2>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -23,27 +23,25 @@
         </tr>
     </thead>
 
-    <tbody>
-        @foreach (var item in Model)
+    @*<tbody>
+        @foreach (var blog in Model)
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Title)
+                    @Html.DisplayFor(modelItem => blog.Title)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Copy)
+                    @Html.DisplayFor(modelItem => blog.Copy)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@blog.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@blog.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@blog.Id">Delete</a>
                 </td>
                 <td>
-                    <a asp-action="Details" asp-route-id="@item.Id">Comment</a>
+                    <a asp-action="Details" asp-route-id="@blog.Id">Comment</a>
                 </td>
             </tr>
         }
-    </tbody>
-</table>*@
-
-Test
+    </tbody>*@
+</table>
