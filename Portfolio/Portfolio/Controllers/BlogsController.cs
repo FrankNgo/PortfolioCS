@@ -46,6 +46,7 @@ namespace Portfolio.Controllers
             return View();
         }
 
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Title,Copy")] Blog blog)
